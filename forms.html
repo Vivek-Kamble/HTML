@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- form validation: to check whether the data entered in the form 
+	is valid or not 
+	1) required: ensures that the field is not empty
+	2) min/max/step: min and max allow only values in a specified range
+	The step attribute specifies the legal number intervals for an <input> element.
+	3)minlength / maxlength: ensures that the text entered in the input tag contains specified number of letters 
+	4) pattern: matches data with a regex pattern
+	5) checked: ensures that an option is checked by default (input type radio/checkbox)-->
+
+	<form action="#" method="post">
+	<fieldset>
+		<legend>Registration Form</legend>
+		<table cellpadding="5">
+			<tr>
+				<td><label for="username">Enter User Name</label></td>
+				<td><input type="text" name="username" required></td>
+			</tr>
+			<tr>
+				<td><label for="pw">Password</label></td>
+				<td><input type="password" name="pw" minlength="5" maxlength="10"></td>
+			</tr>
+			<tr>
+				<td><label for="marks">Marks</label></td>
+				<td><input type="number" name="marks" min="0" max="100" step="5"></td>
+			</tr>
+			<tr>
+				<td><label for="em">Enter your email</label></td>
+				<td><input type="email" name="em"></td>
+			</tr>
+			<tr>
+				<td><label for="DOB">Enter DOB</label></td>
+				<td><input type="date" name="DOB"></td>
+			</tr>
+			<tr>
+				<td><label for="PAN">PAN No</label></td>
+				<td><input type="text" name="PAN" pattern="[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}" required></td>
+				<!-- ABCDE1234F -->
+				<!-- the language used in pattern is called regex
+				or regular expressions -->
+			</tr>
+			<tr>
+				<td><label for="addr">Enter Home Address</label></td>
+				<td><textarea name="addr" cols="20" rows="5" placeholder="Enter Permanent address here"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">Select Course</label></td>
+				<td>
+					<input type="checkbox" name="HTML" checked>
+					<label for="HTML">HTML</label><br>
+					<input type="checkbox" name="CSS">
+					<label for="CSS">CSS</label><br>
+					<input type="checkbox" name="C">
+					<label for="C">C</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="gender">Select Gender</label></td>
+				<td>
+					<input type="radio" name="gender" value="male">
+					<label for="male">Male</label>
+					<input type="radio" name="gender" value="female" checked>
+					<label for="female">Female</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<fieldset>
+						<legend>Select Gender</legend>
+						<input type="radio" name="gender" value="male">
+						<label for="male">Male</label>
+						<input type="radio" name="gender" value="female">
+						<label for="female">Female</label>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="state">Select State</label></td>
+				<td>
+					<select name="state">
+						<option value="1">Maharashtra</option>
+						<option value="2" selected>Haryana</option>
+						<option value="3" disabled>Assam</option>
+						<option value="4">Kerela</option>
+						<option value="5" hidden>Goa</option>
+					</select>
+					<!-- there can only be one selected option -->
+				</td>
+			</tr>
+			<tr>
+				<td><label for="photo">Select Profile photo</label></td>
+				<td><input type="file" name="photo" accept="image/*"></td>
+				<!--  accept=".jpg, .jpeg, .gif, .bmp" -->
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" name=""></td>
+			</tr>
+		</table>
+		</fieldset>
+		<!-- an input tag provides an area, where user can write some text / provide some input -->
+		<!-- use textarea for multi line text -->
+		<!-- name attribute ensures that the data being sent is associatd with their appropriate names. The name attribute is used to identify data on the server -->
+		<!-- input type: submit creates a button, which when clicked - sends data to the server -->
+		<!-- label tag is used to tell the browser that the text inside is a label for an input tag, the for attribute tells which tag is the label for -->
+		
+	</form>
+</body>
+</html>

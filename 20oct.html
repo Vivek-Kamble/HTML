@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>20 October--->>Forms</title>
+</head>
+<body>
+	<form action="#" method="post">
+		<fieldset>
+			<LEGEND>Registration Form</LEGEND>
+		<table cellpadding="5">
+			<tr>
+				<td><label for="username">Name</label></td>
+				<td><input type="text" name="username" required=""></td>
+			</tr>
+			<tr>
+				<td><label for="pw">Password</label></td>
+				<td><input type="Password" name="pw" required="" minlength="8"></td>
+			</tr>
+			<tr>
+				<td><label for="age">Age</label></td>
+				<td><input type="number" name="age" min="20" max="60" step="5" ></td>
+			</tr>
+			<tr>
+				<td><label for="em">Enter your email</label></td>
+				<td><input type="email" name="em"></td>
+			</tr>
+			<tr>
+				<td><label for="DOB">Enter DOB</label></td>
+				<td><input type="date" name="DOB"></td>
+			</tr>
+			<tr>
+				<td><label for="addr">Enter Home Address</label></td>
+				<td><textarea name="addr" cols="20" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">Select Course</label></td>
+				<td>
+					<input type="checkbox" name="HTML">
+					<label for="HTML">HTML</label></br>
+					<input type="checkbox" name="CSS">
+					<label for="CSS">CSS</label></br>
+					<input type="checkbox" name="C">
+					<label for="C">C</label></br>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="">Select Gender</label></td>
+				<td>
+					<input type="radio" name="gender" value="male" checked="">
+					<label for="male">Male</label>
+					<input type="radio" name="gender" value="female">
+					<label for="female">Female</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="state">Select state</label></td>
+				<td>
+					<select name="state">
+						<option value="1">Maharshtra</option>						
+						<option value="2" disabled="">MP</option>
+						<option value="3" hidden="">UP</option>
+						<option value="4" selected="">Goa</option>
+						<option value="5">Assam</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<fieldset>
+						<legend>Select Gender</legend>
+						<input type="radio" name="gender" value="male">
+						<label for="male">Male</label>
+						<input type="radio" name="gender" value="female">
+						<label for="female">Female</label>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="photo">Select profile pic</label></td>
+				<td><input type="file" name="photo" accept="image/*"></td>
+				<!--accept=".jpg,.jpeg,.gif,.png"-->
+			</tr>
+			<tr>
+				<td><label for="pan">Enter PAN</label></td>
+				<td><input type="text" name="pan" placeholder="ABCDE1234F" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2"><input type="submit" name=""></td>
+			</tr>
+		</table>
+		</fieldset>
+	</form>
+</body>
+</html>
